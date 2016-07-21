@@ -1,0 +1,74 @@
+.space{
+    margin: 4px 0;
+}
+.slideImg{
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    margin: 0 auto;
+}
+.slider-Img{
+    background-color: #f4f5f6;
+}
+.slider-Info{
+    background-color: #e0e1e2;
+}
+.slider-Nav{
+    background-color: #e0e1e2;
+}
+/*Slick arrow*/
+
+.prevArrow{
+    left: 0;
+    top: 50%;
+    position: absolute;
+    transform: translate(0%, -50%);
+    z-index: 1;
+    background-color: red;
+    padding: 30px 10px;
+
+}
+.nextArrow{
+    right: 0;
+    top: 50%;
+    position: absolute;
+    transform: translate(0%, -50%);
+    z-index: 1;
+    background-color: red;
+    padding: 30px 10px;
+}
+
+
+.prevArrow , .nextArrow {
+    color: #ccc;
+}
+.prevArrow:hover, .nextArrow:hover{
+    color:#fd7a04;
+
+}
+
+/*Slide Info*/
+.no-gutter [class^="col-"], [class*=" col-"] {
+    margin: 15px 0;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+
+h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+p{
+    margin-right: 16px;
+    margin-left: 16px;
+    font-size: 16px;
+}
+
+/*Modal SPace*/
+.modalSpace [class^='col-']{
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
