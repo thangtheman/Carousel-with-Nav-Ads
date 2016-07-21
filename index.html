@@ -139,16 +139,16 @@
 <div class="row">
     <div class="col-sm-9">
         <section>
-                <div class="slider slider-Img" >
-                    <div><img alt="" class="slideImg" src="assets/img/slide/p1.jpg"></div>
-                    <div><img alt="" class="slideImg" src="assets/img/slide/p2.jpg"></div>
-                    <div><img alt="" class="slideImg" src="assets/img/slide/p3.jpg"></div>
-                    <div><img alt="" class="slideImg" src="assets/img/slide/p4.jpg"></div>
-                    <div><img alt="" class="slideImg" src="assets/img/slide/p5.jpg"></div>
-                    <div><img alt="" class="slideImg" src="assets/img/slide/p6.jpg"></div>
-                    <div><img alt="" class="slideImg" src="assets/img/slide/p6.jpg"></div>
+            <div class="text-center"><h1 id="titleHere"></h1></div>
 
-                </div>
+            <div class="slider slider-Img">
+                <div><img alt="" data-slideInfo="This title is  1" class="slideImg img-responsive" src="assets/img/slide/p1.jpg"></div>
+                <div><img alt="" data-slideInfo="This title is  2" class="slideImg img-responsive" src="assets/img/slide/p2.jpg"></div>
+                <div><img alt="" data-slideInfo="This title is  3" class="slideImg img-responsive" src="assets/img/slide/p3.jpg"></div>
+                <div><img alt="" data-slideInfo="This title is  4" class="slideImg img-responsive" src="assets/img/slide/p4.jpg"></div>
+                <div><img alt="" data-slideInfo="This title is  5" class="slideImg img-responsive" src="assets/img/slide/p5.jpg"></div>
+                <div><img alt="" data-slideInfo="This title is  6" class="slideImg img-responsive" src="assets/img/slide/p6.jpg"></div>
+            </div>
                 <div class="slider slider-Info space">
                     <div>
                         <h2 > Title 1</h2>
@@ -234,7 +234,12 @@
         asNavFor: '.slider-Nav',
         prevArrow: '<a class="prevArrow" href=""><i class="fa fa-chevron-left  fa-2x" aria-hidden="true"></i></a>',
         nextArrow: '<a class="nextArrow" href=""><i class="fa fa-chevron-right  fa-2x" aria-hidden="true"></i></a>',
-    });
+    }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        var info = document.getElementsByTagName('img')[nextSlide];
+        console.log(info.getAttribute('data-slideInfo'));
+        document.getElementById("titleHere").innerHTML = info.getAttribute('data-slideInfo');
+    })
+    ;
     $('.slider-Info').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -252,11 +257,9 @@
         arrows:false,
         infinite: true,
         rtl:false,
-    }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        var info = document.getElementsByTagName('img')[nextSlide];
-        console.log(info.getAttribute('data-slideInfo'));
-        document.getElementById("titleHere").innerHTML = info.getAttribute('data-slideInfo');
-    });
+    })
+
+    ;
 </script>
 </body>
 </html>
