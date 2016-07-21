@@ -142,12 +142,12 @@
             <div class="text-center"><h1 id="titleHere"></h1></div>
 
             <div class="slider slider-Img">
-                <div><img alt="" data-slideInfo="This title is  1" class="slideImg img-responsive" src="assets/img/slide/p1.jpg"></div>
-                <div><img alt="" data-slideInfo="This title is  2" class="slideImg img-responsive" src="assets/img/slide/p2.jpg"></div>
-                <div><img alt="" data-slideInfo="This title is  3" class="slideImg img-responsive" src="assets/img/slide/p3.jpg"></div>
-                <div><img alt="" data-slideInfo="This title is  4" class="slideImg img-responsive" src="assets/img/slide/p4.jpg"></div>
-                <div><img alt="" data-slideInfo="This title is  5" class="slideImg img-responsive" src="assets/img/slide/p5.jpg"></div>
-                <div><img alt="" data-slideInfo="This title is  6" class="slideImg img-responsive" src="assets/img/slide/p6.jpg"></div>
+                <div><img alt="" data-slideInfo="This title is number 1" class="slideImg mainImg img-responsive" src="assets/img/slide/p1.jpg"></div>
+                <div><img alt="" data-slideInfo="This title is  2" class="slideImg mainImg img-responsive" src="assets/img/slide/p2.jpg"></div>
+                <div><img alt="" data-slideInfo="This title is  3" class="slideImg mainImg img-responsive" src="assets/img/slide/p3.jpg"></div>
+                <div><img alt="" data-slideInfo="This title is  4" class="slideImg mainImg img-responsive" src="assets/img/slide/p4.jpg"></div>
+                <div><img alt="" data-slideInfo="This title is  5" class="slideImg mainImg img-responsive" src="assets/img/slide/p5.jpg"></div>
+                <div><img alt="" data-slideInfo="This title is  6" class="slideImg mainImg img-responsive" src="assets/img/slide/p6.jpg"></div>
             </div>
                 <div class="slider slider-Info space">
                     <div>
@@ -220,7 +220,7 @@
 <script>
     var n = $( ".slideImg" ).length;
     console.log(n);
-    var dataSlideInfo = $("img").attr("data-slideInfo");
+    var dataSlideInfo = $(".mainImg").attr("data-slideInfo");
     console.log(dataSlideInfo);
     document.getElementById("titleHere").innerHTML = dataSlideInfo;
     $('.slider-Img div:nth-child(3n)').after('<div><img alt="" data-slideInfo="Ads" class="slideImg img-responsive" src="cool.jpg"></div>');
@@ -249,7 +249,7 @@
         asNavFor: '.slider-Nav'
     });
     $('.slider-Nav').slick({
-        slidesToShow: 3.5,
+        slidesToShow: 3,
         slidesToScroll: 1,
         asNavFor: '.slider-Img, .slider-Info',
         focusOnSelect: true,
